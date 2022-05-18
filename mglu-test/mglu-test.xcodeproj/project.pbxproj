@@ -13,6 +13,11 @@
 		2247C40B28347A9F00723B4F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 2247C40A28347A9F00723B4F /* Quick */; };
 		225D780428347FDB00ED52FA /* SingleRepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D780328347FDB00ED52FA /* SingleRepoView.swift */; };
 		225D78062834944000ED52FA /* ReposListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78052834944000ED52FA /* ReposListViewTests.swift */; };
+		225D780E2834A64C00ED52FA /* GitHubAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D780D2834A64C00ED52FA /* GitHubAppService.swift */; };
+		225D78102834A81900ED52FA /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D780F2834A81900ED52FA /* Request.swift */; };
+		225D78122834A9CE00ED52FA /* GitHubAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78112834A9CE00ED52FA /* GitHubAppRepository.swift */; };
+		225D78142834AB0000ED52FA /* GitHubAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78132834AB0000ED52FA /* GitHubAPIError.swift */; };
+		225D78162834AC3F00ED52FA /* RepoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78152834AC3F00ED52FA /* RepoListData.swift */; };
 		22F3DAE928331CFC005A0C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DAE828331CFC005A0C25 /* AppDelegate.swift */; };
 		22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DAEA28331CFC005A0C25 /* SceneDelegate.swift */; };
 		22F3DAF228331CFF005A0C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F3DAF128331CFF005A0C25 /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 		2247C3F82834755B00723B4F /* SingleRepoTableCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoTableCellTests.swift; sourceTree = "<group>"; };
 		225D780328347FDB00ED52FA /* SingleRepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoView.swift; sourceTree = "<group>"; };
 		225D78052834944000ED52FA /* ReposListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewTests.swift; sourceTree = "<group>"; };
+		225D780D2834A64C00ED52FA /* GitHubAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppService.swift; sourceTree = "<group>"; };
+		225D780F2834A81900ED52FA /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		225D78112834A9CE00ED52FA /* GitHubAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppRepository.swift; sourceTree = "<group>"; };
+		225D78132834AB0000ED52FA /* GitHubAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIError.swift; sourceTree = "<group>"; };
+		225D78152834AC3F00ED52FA /* RepoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListData.swift; sourceTree = "<group>"; };
 		22F3DAE528331CFC005A0C25 /* mglu-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mglu-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F3DAE828331CFC005A0C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F3DAEA28331CFC005A0C25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +112,42 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		225D780A2834A60D00ED52FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				225D78182834B39600ED52FA /* Repository */,
+				225D78172834B38F00ED52FA /* Service */,
+				225D780C2834A63200ED52FA /* Responses */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		225D780C2834A63200ED52FA /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				225D78152834AC3F00ED52FA /* RepoListData.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		225D78172834B38F00ED52FA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				225D780D2834A64C00ED52FA /* GitHubAppService.swift */,
+				225D780F2834A81900ED52FA /* Request.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		225D78182834B39600ED52FA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				225D78112834A9CE00ED52FA /* GitHubAppRepository.swift */,
+				225D78132834AB0000ED52FA /* GitHubAPIError.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		22F3DADC28331CFC005A0C25 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +169,7 @@
 		22F3DAE728331CFC005A0C25 /* mglu-test */ = {
 			isa = PBXGroup;
 			children = (
+				225D780A2834A60D00ED52FA /* Network */,
 				22F3DB1F28345FFC005A0C25 /* ReposList */,
 				22F3DB1C28332228005A0C25 /* Assets */,
 				22F3DAFD28331E2B005A0C25 /* Coordinator */,
@@ -320,12 +367,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F3DAFF28331E4F005A0C25 /* GitHubAppCoordinator.swift in Sources */,
+				225D78122834A9CE00ED52FA /* GitHubAppRepository.swift in Sources */,
 				22F3DB292834659B005A0C25 /* SingleRepoTableCell.swift in Sources */,
+				225D780E2834A64C00ED52FA /* GitHubAppService.swift in Sources */,
+				225D78162834AC3F00ED52FA /* RepoListData.swift in Sources */,
 				225D780428347FDB00ED52FA /* SingleRepoView.swift in Sources */,
 				22F3DAE928331CFC005A0C25 /* AppDelegate.swift in Sources */,
 				22F3DB2728346320005A0C25 /* ReposListViewModel.swift in Sources */,
 				22F3DB222834602D005A0C25 /* ReposListView.swift in Sources */,
+				225D78102834A81900ED52FA /* Request.swift in Sources */,
 				22F3DB242834622B005A0C25 /* ReposListTableDataSource.swift in Sources */,
+				225D78142834AB0000ED52FA /* GitHubAPIError.swift in Sources */,
 				22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
