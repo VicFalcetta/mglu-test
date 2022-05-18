@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2247C3FF283476CF00723B4F /* SingleRepoTableCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2247C3F82834755B00723B4F /* SingleRepoTableCellTests.swift */; };
+		2247C40528347A6A00723B4F /* Nimble-Snapshots in Frameworks */ = {isa = PBXBuildFile; productRef = 2247C40428347A6A00723B4F /* Nimble-Snapshots */; };
+		2247C40828347A8700723B4F /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 2247C40728347A8700723B4F /* Nimble */; };
+		2247C40B28347A9F00723B4F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 2247C40A28347A9F00723B4F /* Quick */; };
+		225D780428347FDB00ED52FA /* SingleRepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D780328347FDB00ED52FA /* SingleRepoView.swift */; };
+		225D78062834944000ED52FA /* ReposListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78052834944000ED52FA /* ReposListViewTests.swift */; };
 		22F3DAE928331CFC005A0C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DAE828331CFC005A0C25 /* AppDelegate.swift */; };
 		22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DAEA28331CFC005A0C25 /* SceneDelegate.swift */; };
 		22F3DAF228331CFF005A0C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F3DAF128331CFF005A0C25 /* Assets.xcassets */; };
@@ -14,13 +20,14 @@
 		22F3DAFF28331E4F005A0C25 /* GitHubAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DAFE28331E4F005A0C25 /* GitHubAppCoordinator.swift */; };
 		22F3DB0228331FD1005A0C25 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22F3DB0128331FD1005A0C25 /* SnapKit */; };
 		22F3DB052833200F005A0C25 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22F3DB042833200F005A0C25 /* Alamofire */; };
-		22F3DB08283320D0005A0C25 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 22F3DB07283320D0005A0C25 /* Nimble */; };
-		22F3DB0B283320EF005A0C25 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 22F3DB0A283320EF005A0C25 /* Quick */; };
-		22F3DB0E28332152005A0C25 /* Nimble-Snapshots in Frameworks */ = {isa = PBXBuildFile; productRef = 22F3DB0D28332152005A0C25 /* Nimble-Snapshots */; };
+		22F3DB222834602D005A0C25 /* ReposListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DB212834602D005A0C25 /* ReposListView.swift */; };
+		22F3DB242834622B005A0C25 /* ReposListTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DB232834622B005A0C25 /* ReposListTableDataSource.swift */; };
+		22F3DB2728346320005A0C25 /* ReposListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DB2628346320005A0C25 /* ReposListViewModel.swift */; };
+		22F3DB292834659B005A0C25 /* SingleRepoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F3DB282834659B005A0C25 /* SingleRepoTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		22F3DB17283321AE005A0C25 /* PBXContainerItemProxy */ = {
+		2247C3FA2834755B00723B4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 22F3DADD28331CFC005A0C25 /* Project object */;
 			proxyType = 1;
@@ -30,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2247C3F62834755B00723B4F /* mglu-test_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mglu-test_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2247C3F82834755B00723B4F /* SingleRepoTableCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoTableCellTests.swift; sourceTree = "<group>"; };
+		225D780328347FDB00ED52FA /* SingleRepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoView.swift; sourceTree = "<group>"; };
+		225D78052834944000ED52FA /* ReposListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewTests.swift; sourceTree = "<group>"; };
 		22F3DAE528331CFC005A0C25 /* mglu-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mglu-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F3DAE828331CFC005A0C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F3DAEA28331CFC005A0C25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,37 +48,65 @@
 		22F3DAF428331CFF005A0C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22F3DAF628331CFF005A0C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F3DAFE28331E4F005A0C25 /* GitHubAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppCoordinator.swift; sourceTree = "<group>"; };
-		22F3DB13283321AE005A0C25 /* mglu-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mglu-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F3DB212834602D005A0C25 /* ReposListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListView.swift; sourceTree = "<group>"; };
+		22F3DB232834622B005A0C25 /* ReposListTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListTableDataSource.swift; sourceTree = "<group>"; };
+		22F3DB2628346320005A0C25 /* ReposListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModel.swift; sourceTree = "<group>"; };
+		22F3DB282834659B005A0C25 /* SingleRepoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2247C3F32834755B00723B4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2247C40B28347A9F00723B4F /* Quick in Frameworks */,
+				2247C40528347A6A00723B4F /* Nimble-Snapshots in Frameworks */,
+				2247C40828347A8700723B4F /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F3DAE228331CFC005A0C25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F3DB08283320D0005A0C25 /* Nimble in Frameworks */,
 				22F3DB0228331FD1005A0C25 /* SnapKit in Frameworks */,
-				22F3DB0B283320EF005A0C25 /* Quick in Frameworks */,
-				22F3DB0E28332152005A0C25 /* Nimble-Snapshots in Frameworks */,
 				22F3DB052833200F005A0C25 /* Alamofire in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F3DB10283321AE005A0C25 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2247C3F72834755B00723B4F /* mglu-test_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				225D78082834A03A00ED52FA /* ReposList */,
+			);
+			path = "mglu-test_Tests";
+			sourceTree = "<group>";
+		};
+		225D78082834A03A00ED52FA /* ReposList */ = {
+			isa = PBXGroup;
+			children = (
+				225D78092834A04200ED52FA /* Views */,
+			);
+			path = ReposList;
+			sourceTree = "<group>";
+		};
+		225D78092834A04200ED52FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2247C3F82834755B00723B4F /* SingleRepoTableCellTests.swift */,
+				225D78052834944000ED52FA /* ReposListViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		22F3DADC28331CFC005A0C25 = {
 			isa = PBXGroup;
 			children = (
 				22F3DAE728331CFC005A0C25 /* mglu-test */,
-				22F3DB14283321AE005A0C25 /* mglu-testTests */,
+				2247C3F72834755B00723B4F /* mglu-test_Tests */,
 				22F3DAE628331CFC005A0C25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				22F3DAE528331CFC005A0C25 /* mglu-test.app */,
-				22F3DB13283321AE005A0C25 /* mglu-testTests.xctest */,
+				2247C3F62834755B00723B4F /* mglu-test_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +123,7 @@
 		22F3DAE728331CFC005A0C25 /* mglu-test */ = {
 			isa = PBXGroup;
 			children = (
+				22F3DB1F28345FFC005A0C25 /* ReposList */,
 				22F3DB1C28332228005A0C25 /* Assets */,
 				22F3DAFD28331E2B005A0C25 /* Coordinator */,
 				22F3DAFC28331E01005A0C25 /* ApplicationConfig */,
@@ -109,13 +149,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		22F3DB14283321AE005A0C25 /* mglu-testTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "mglu-testTests";
-			sourceTree = "<group>";
-		};
 		22F3DB1C28332228005A0C25 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,9 +166,60 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		22F3DB1F28345FFC005A0C25 /* ReposList */ = {
+			isa = PBXGroup;
+			children = (
+				22F3DB2028346015005A0C25 /* Views */,
+			);
+			path = ReposList;
+			sourceTree = "<group>";
+		};
+		22F3DB2028346015005A0C25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22F3DB252834630E005A0C25 /* Models */,
+				22F3DB212834602D005A0C25 /* ReposListView.swift */,
+				22F3DB282834659B005A0C25 /* SingleRepoTableCell.swift */,
+				225D780328347FDB00ED52FA /* SingleRepoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22F3DB252834630E005A0C25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22F3DB232834622B005A0C25 /* ReposListTableDataSource.swift */,
+				22F3DB2628346320005A0C25 /* ReposListViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2247C3F52834755B00723B4F /* mglu-test_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2247C3FC2834755B00723B4F /* Build configuration list for PBXNativeTarget "mglu-test_Tests" */;
+			buildPhases = (
+				2247C3F22834755B00723B4F /* Sources */,
+				2247C3F32834755B00723B4F /* Frameworks */,
+				2247C3F42834755B00723B4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2247C3FB2834755B00723B4F /* PBXTargetDependency */,
+			);
+			name = "mglu-test_Tests";
+			packageProductDependencies = (
+				2247C40428347A6A00723B4F /* Nimble-Snapshots */,
+				2247C40728347A8700723B4F /* Nimble */,
+				2247C40A28347A9F00723B4F /* Quick */,
+			);
+			productName = "mglu-test_Tests";
+			productReference = 2247C3F62834755B00723B4F /* mglu-test_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		22F3DAE428331CFC005A0C25 /* mglu-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22F3DAF928331CFF005A0C25 /* Build configuration list for PBXNativeTarget "mglu-test" */;
@@ -152,31 +236,10 @@
 			packageProductDependencies = (
 				22F3DB0128331FD1005A0C25 /* SnapKit */,
 				22F3DB042833200F005A0C25 /* Alamofire */,
-				22F3DB07283320D0005A0C25 /* Nimble */,
-				22F3DB0A283320EF005A0C25 /* Quick */,
-				22F3DB0D28332152005A0C25 /* Nimble-Snapshots */,
 			);
 			productName = "mglu-test";
 			productReference = 22F3DAE528331CFC005A0C25 /* mglu-test.app */;
 			productType = "com.apple.product-type.application";
-		};
-		22F3DB12283321AE005A0C25 /* mglu-testTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 22F3DB19283321AE005A0C25 /* Build configuration list for PBXNativeTarget "mglu-testTests" */;
-			buildPhases = (
-				22F3DB0F283321AE005A0C25 /* Sources */,
-				22F3DB10283321AE005A0C25 /* Frameworks */,
-				22F3DB11283321AE005A0C25 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22F3DB18283321AE005A0C25 /* PBXTargetDependency */,
-			);
-			name = "mglu-testTests";
-			productName = "mglu-testTests";
-			productReference = 22F3DB13283321AE005A0C25 /* mglu-testTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -188,12 +251,12 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					22F3DAE428331CFC005A0C25 = {
-						CreatedOnToolsVersion = 13.3.1;
-					};
-					22F3DB12283321AE005A0C25 = {
+					2247C3F52834755B00723B4F = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 22F3DAE428331CFC005A0C25;
+					};
+					22F3DAE428331CFC005A0C25 = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
@@ -209,21 +272,28 @@
 			packageReferences = (
 				22F3DB0028331FD0005A0C25 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				22F3DB032833200F005A0C25 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				22F3DB06283320D0005A0C25 /* XCRemoteSwiftPackageReference "Nimble" */,
-				22F3DB09283320EF005A0C25 /* XCRemoteSwiftPackageReference "Quick" */,
-				22F3DB0C28332152005A0C25 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */,
+				2247C40328347A6A00723B4F /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */,
+				2247C40628347A8700723B4F /* XCRemoteSwiftPackageReference "Nimble" */,
+				2247C40928347A9F00723B4F /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = 22F3DAE628331CFC005A0C25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				22F3DAE428331CFC005A0C25 /* mglu-test */,
-				22F3DB12283321AE005A0C25 /* mglu-testTests */,
+				2247C3F52834755B00723B4F /* mglu-test_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2247C3F42834755B00723B4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F3DAE328331CFC005A0C25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,40 +303,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22F3DB11283321AE005A0C25 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2247C3F22834755B00723B4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D78062834944000ED52FA /* ReposListViewTests.swift in Sources */,
+				2247C3FF283476CF00723B4F /* SingleRepoTableCellTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22F3DAE128331CFC005A0C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				22F3DAFF28331E4F005A0C25 /* GitHubAppCoordinator.swift in Sources */,
+				22F3DB292834659B005A0C25 /* SingleRepoTableCell.swift in Sources */,
+				225D780428347FDB00ED52FA /* SingleRepoView.swift in Sources */,
 				22F3DAE928331CFC005A0C25 /* AppDelegate.swift in Sources */,
+				22F3DB2728346320005A0C25 /* ReposListViewModel.swift in Sources */,
+				22F3DB222834602D005A0C25 /* ReposListView.swift in Sources */,
+				22F3DB242834622B005A0C25 /* ReposListTableDataSource.swift in Sources */,
 				22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22F3DB0F283321AE005A0C25 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22F3DB18283321AE005A0C25 /* PBXTargetDependency */ = {
+		2247C3FB2834755B00723B4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 22F3DAE428331CFC005A0C25 /* mglu-test */;
-			targetProxy = 22F3DB17283321AE005A0C25 /* PBXContainerItemProxy */;
+			targetProxy = 2247C3FA2834755B00723B4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -282,6 +352,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2247C3FD2834755B00723B4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4LXC4A87QZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.victorfalcetta.mglu-test-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mglu-test.app/mglu-test";
+			};
+			name = Debug;
+		};
+		2247C3FE2834755B00723B4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4LXC4A87QZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.victorfalcetta.mglu-test-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mglu-test.app/mglu-test";
+			};
+			name = Release;
+		};
 		22F3DAF728331CFF005A0C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -405,10 +511,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LXC4A87QZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "mglu-test/Info.plist";
+				INFOPLIST_FILE = "mglu-test/ApplicationConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -433,10 +538,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LXC4A87QZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "mglu-test/Info.plist";
+				INFOPLIST_FILE = "mglu-test/ApplicationConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,45 +556,18 @@
 			};
 			name = Release;
 		};
-		22F3DB1A283321AE005A0C25 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4LXC4A87QZ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorfalcetta.mglu-testTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mglu-test.app/mglu-test";
-			};
-			name = Debug;
-		};
-		22F3DB1B283321AE005A0C25 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4LXC4A87QZ;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.victorfalcetta.mglu-testTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mglu-test.app/mglu-test";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2247C3FC2834755B00723B4F /* Build configuration list for PBXNativeTarget "mglu-test_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2247C3FD2834755B00723B4F /* Debug */,
+				2247C3FE2834755B00723B4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		22F3DAE028331CFC005A0C25 /* Build configuration list for PBXProject "mglu-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -509,18 +586,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22F3DB19283321AE005A0C25 /* Build configuration list for PBXNativeTarget "mglu-testTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22F3DB1A283321AE005A0C25 /* Debug */,
-				22F3DB1B283321AE005A0C25 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2247C40328347A6A00723B4F /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashfurrow/Nimble-Snapshots";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.4.0;
+			};
+		};
+		2247C40628347A8700723B4F /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		2247C40928347A9F00723B4F /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		22F3DB0028331FD0005A0C25 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -537,33 +629,24 @@
 				minimumVersion = 5.6.0;
 			};
 		};
-		22F3DB06283320D0005A0C25 /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		22F3DB09283320EF005A0C25 /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		22F3DB0C28332152005A0C25 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashfurrow/Nimble-Snapshots";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 9.4.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2247C40428347A6A00723B4F /* Nimble-Snapshots */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2247C40328347A6A00723B4F /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */;
+			productName = "Nimble-Snapshots";
+		};
+		2247C40728347A8700723B4F /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2247C40628347A8700723B4F /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		2247C40A28347A9F00723B4F /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2247C40928347A9F00723B4F /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
 		22F3DB0128331FD1005A0C25 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 22F3DB0028331FD0005A0C25 /* XCRemoteSwiftPackageReference "SnapKit" */;
@@ -573,21 +656,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 22F3DB032833200F005A0C25 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		22F3DB07283320D0005A0C25 /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 22F3DB06283320D0005A0C25 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
-		22F3DB0A283320EF005A0C25 /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 22F3DB09283320EF005A0C25 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		22F3DB0D28332152005A0C25 /* Nimble-Snapshots */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 22F3DB0C28332152005A0C25 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */;
-			productName = "Nimble-Snapshots";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
