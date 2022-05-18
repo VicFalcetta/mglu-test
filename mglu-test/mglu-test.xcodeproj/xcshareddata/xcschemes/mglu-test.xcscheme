@@ -38,6 +38,16 @@
                ReferencedContainer = "container:mglu-test.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2247C3F52834755B00723B4F"
+               BuildableName = "mglu-test_Tests.xctest"
+               BlueprintName = "mglu-test_Tests"
+               ReferencedContainer = "container:mglu-test.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
