@@ -16,7 +16,14 @@ final class GitHubAppCoordinator {
     func start(flow: GitHubAppFlow) {
         switch flow {
         case .home:
-            break
+            setupRepoList()
         }
+    }
+    
+    private func setupRepoList() {
+        let presenter = RepoListPresenter()
+        let viewController = RepoListViewController(presenter: presenter)
+        presenter.viewController = viewController
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

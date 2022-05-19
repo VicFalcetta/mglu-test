@@ -15,7 +15,7 @@ final class SingleRepoView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.textColor = .secondaryLabel
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         return label
     }()
     

@@ -1,6 +1,6 @@
 import Alamofire
 
-final class GitHubAppRepository {
+final class GitHubAppRepository: GitHubAppRepositoryType {
     func requestRepoList(page: Int, completion: @escaping (Result<RepoListData, GitHubAPIError>) -> Void) {
         request(GitHubAppService.repoList(page: page),
                 onComplete: completion)
@@ -14,7 +14,14 @@ final class GitHubAppRepository {
             encoding: spec.encoding,
             headers: spec.headers
         )
-        .validate()
+        .validate(statusCode: 200..<600)
+        .response { response in
+            print("Request: \(response.request)")
+            if let data = response.data,
+               let json = String(data: data, encoding: .utf8) {
+                print("Json: \n \(json)")
+            }
+        }
         .responseDecodable(of: T.self) { response in
             switch response.result {
             case let .success(decoded):

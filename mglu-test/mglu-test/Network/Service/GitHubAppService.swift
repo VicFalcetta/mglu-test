@@ -21,14 +21,14 @@ extension GitHubAppService: Request {
     }
     
     var encoding: ParameterEncoding {
-        JSONEncoding()
+        URLEncoding(destination: .queryString)
     }
     
     var parameters: [String : Any]? {
         switch self {
         case .repoList(let page):
             return [
-                "language": "Swift",
+                "q": "language:Swift",
                 "sort": "stars",
                 "page": "\(page)"
             ]

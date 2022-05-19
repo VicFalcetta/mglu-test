@@ -6,7 +6,7 @@ struct RepoListData: Decodable, Equatable {
 
 struct SingleRepoData: Decodable, Equatable {
     let name: String
-    let description: String
+    let description: String?
     let owner: OwnerData
     let stargazersCount: Int
     let forksCount: Int

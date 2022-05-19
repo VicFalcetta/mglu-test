@@ -1,8 +1,5 @@
-//
-//  GitHubAppRepositoryType.swift
-//  mglu-test
-//
-//  Created by Victor Falcetta do Nascimento on 18/05/22.
-//
-
 import Foundation
+
+protocol GitHubAppRepositoryType {
+    func requestRepoList(page: Int, completion: @escaping (Result<RepoListData, GitHubAPIError>) -> Void)
+}
