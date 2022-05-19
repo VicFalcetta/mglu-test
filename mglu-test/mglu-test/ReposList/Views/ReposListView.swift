@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class ReposListView: UIView {
+final class ReposListView: UIView, ReposListViewType {
     weak var reposTableDelegate: UITableViewDelegate?
     private var reposTableDataSource: UITableViewDataSource?
 
@@ -11,13 +11,24 @@ final class ReposListView: UIView {
         table.backgroundColor = .systemBackground
         table.register(SingleRepoTableCell.self,
                        forCellReuseIdentifier: "repoSingleCell")
+        table.rowHeight = UITableView.automaticDimension
+        table.estimatedRowHeight = 80
         return table
+    }()
+    
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.style = .large
+        indicator.color = .systemOrange
+        indicator.isHidden = true
+        return indicator
     }()
     
     init() {
         super.init(frame: .zero)
         buildViewHierarchy()
         addConstraints()
+        backgroundColor = .systemBackground
     }
     
     @available(*, unavailable)
@@ -27,10 +38,15 @@ final class ReposListView: UIView {
     
     private func buildViewHierarchy() {
         addSubview(reposTable)
+        addSubview(loadingIndicator)
     }
     
     private func addConstraints() {
         reposTable.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
+        loadingIndicator.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -38,5 +54,16 @@ final class ReposListView: UIView {
     func show(viewModel: ReposListViewModel) {
         reposTableDataSource = ReposListTableDataSource(reposList: viewModel)
         reposTable.dataSource = reposTableDataSource
+        reposTable.delegate = reposTableDelegate
+        reposTable.reloadData()
+    }
+    
+    func showLoading(isLoading: Bool) {
+        loadingIndicator.isHidden = !isLoading
+        if isLoading {
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
+        }
     }
 }
