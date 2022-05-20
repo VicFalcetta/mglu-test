@@ -35,6 +35,18 @@ final class RepoListViewControllerTests: QuickSpec {
                     expect(viewSpy.reposTableDelegate).to(beAKindOf(RepoListViewController.self))
                 }
             }
+            
+            describe("#didTapTryAgain") {
+                beforeEach {
+                    _ = sut.view
+                    viewDummy.didPressTryAgain?()
+                }
+                
+                it("has to call presenter's requestRepoList") {
+                    expect(presenterSpy.sentIsPaginating).to(beFalse())
+                    expect(presenterSpy.requestRepoListCount).to(equal(2))
+                }
+            }
         }
         
         describe("#show") {
@@ -67,6 +79,38 @@ final class RepoListViewControllerTests: QuickSpec {
                 
                 expect(viewSpy.sentIsLoading).to(beTrue())
                 expect(viewSpy.showLoadingCount).to(equal(1))
+            }
+        }
+        
+        describe("#showPaginationLoading") {
+            var viewSpy: ReposListViewSpy!
+            beforeEach {
+                viewSpy = ReposListViewSpy()
+                sut = RepoListViewController(presenter: presenterSpy,
+                                             contentView: viewSpy)
+            }
+            
+            it("should call view's spy showPaginationLoading with correct params") {
+                sut.showPaginationLoading(isPaginating: true)
+                
+                expect(viewSpy.sentIsPaginating).to(beTrue())
+                expect(viewSpy.showPaginationLoadingCount).to(equal(1))
+            }
+        }
+        
+        describe("#showError") {
+            var viewSpy: ReposListViewSpy!
+            beforeEach {
+                viewSpy = ReposListViewSpy()
+                sut = RepoListViewController(presenter: presenterSpy,
+                                             contentView: viewSpy)
+            }
+            
+            it("should call view's spy showError with correct params") {
+                sut.showError(hasError: true)
+                
+                expect(viewSpy.sentHasError).to(beTrue())
+                expect(viewSpy.showErrorCount).to(equal(1))
             }
         }
     }

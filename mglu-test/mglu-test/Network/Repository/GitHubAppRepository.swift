@@ -15,13 +15,6 @@ final class GitHubAppRepository: GitHubAppRepositoryType {
             headers: spec.headers
         )
         .validate(statusCode: 200..<600)
-        .response { response in
-            print("Request: \(response.request)")
-            if let data = response.data,
-               let json = String(data: data, encoding: .utf8) {
-                print("Json: \n \(json)")
-            }
-        }
         .responseDecodable(of: T.self) { response in
             switch response.result {
             case let .success(decoded):

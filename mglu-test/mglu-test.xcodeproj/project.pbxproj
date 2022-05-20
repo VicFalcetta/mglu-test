@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221F697B283713B000DB0AF8 /* RepoListErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F697A283713B000DB0AF8 /* RepoListErrorView.swift */; };
+		221F697D283720DF00DB0AF8 /* RepoListErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F697C283720DF00DB0AF8 /* RepoListErrorViewTests.swift */; };
 		2221B6222835B86800962155 /* RepoListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221B6212835B86800962155 /* RepoListPresenterSpy.swift */; };
 		2221B6242835B90D00962155 /* RepoListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221B6232835B90D00962155 /* RepoListViewControllerSpy.swift */; };
 		2221B6262835B9CF00962155 /* RepoListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2221B6252835B9CF00962155 /* RepoListViewControllerTests.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221F697A283713B000DB0AF8 /* RepoListErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListErrorView.swift; sourceTree = "<group>"; };
+		221F697C283720DF00DB0AF8 /* RepoListErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListErrorViewTests.swift; sourceTree = "<group>"; };
 		2221B6212835B86800962155 /* RepoListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenterSpy.swift; sourceTree = "<group>"; };
 		2221B6232835B90D00962155 /* RepoListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewControllerSpy.swift; sourceTree = "<group>"; };
 		2221B6252835B9CF00962155 /* RepoListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewControllerTests.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 			children = (
 				2247C3F82834755B00723B4F /* SingleRepoTableCellTests.swift */,
 				225D78052834944000ED52FA /* ReposListViewTests.swift */,
+				221F697C283720DF00DB0AF8 /* RepoListErrorViewTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				22F3DB252834630E005A0C25 /* Models */,
 				22F3DB212834602D005A0C25 /* ReposListView.swift */,
 				2221B61F2835B50C00962155 /* Cell */,
+				221F697A283713B000DB0AF8 /* RepoListErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,6 +448,7 @@
 				2221B6242835B90D00962155 /* RepoListViewControllerSpy.swift in Sources */,
 				2221B6262835B9CF00962155 /* RepoListViewControllerTests.swift in Sources */,
 				2221B6282835BBB900962155 /* ReposListViewSpy.swift in Sources */,
+				221F697D283720DF00DB0AF8 /* RepoListErrorViewTests.swift in Sources */,
 				2221B62D2835C40600962155 /* GitHubAppRepositorySpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +470,7 @@
 				225D78102834A81900ED52FA /* Request.swift in Sources */,
 				22F3DB242834622B005A0C25 /* ReposListTableDataSource.swift in Sources */,
 				22D82092283585DD008D377C /* RepoListPresenter.swift in Sources */,
+				221F697B283713B000DB0AF8 /* RepoListErrorView.swift in Sources */,
 				22D820942835865A008D377C /* GitHubAppRepositoryType.swift in Sources */,
 				225D78142834AB0000ED52FA /* GitHubAPIError.swift in Sources */,
 				22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */,
