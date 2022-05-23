@@ -57,4 +57,8 @@ extension RepoListPresenter: RepoListPresenterType {
             }
         }
     }
+    
+    func getSelectedRepo(index: Int) -> SingleRepoViewModel {
+        return currentRepoList[index]
+    }
 }

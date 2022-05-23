@@ -2,8 +2,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-final class SingleRepoTableCell: UITableViewCell {
-    private let singleRepoView = SingleRepoView()
+final class PullRequestListTableCell: UITableViewCell {
+    private let pullRequestView = PullRequestListCellView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -23,17 +23,17 @@ final class SingleRepoTableCell: UITableViewCell {
     }
     
     private func buildViewHirarchy() {
-        contentView.addSubview(singleRepoView)
+        contentView.addSubview(pullRequestView)
     }
     
     private func addConstraints() {
-        singleRepoView.snp.makeConstraints {
+        pullRequestView.snp.makeConstraints {
             $0.edges.equalTo(contentView)
         }
     }
     
-    func show(viewModel: SingleRepoViewModel) {
-        singleRepoView.show(viewModel: viewModel)
+    func show(viewModel: PullRequestViewModel) {
+        pullRequestView.show(viewModel: viewModel)
         layoutIfNeeded()
     }
 }

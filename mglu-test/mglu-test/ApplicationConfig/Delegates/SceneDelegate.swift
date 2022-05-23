@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appCoordinator: GitHubAppCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         window?.rootViewController = navigationController
         window?.windowScene = scene
-        coordinator.start(flow: .home)
+        appCoordinator = coordinator
+        appCoordinator?.start(flow: .home)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

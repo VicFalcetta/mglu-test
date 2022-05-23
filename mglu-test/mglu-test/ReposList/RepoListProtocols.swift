@@ -4,6 +4,7 @@ import UIKit
 protocol RepoListPresenterType {
     var paginationRequested: Bool { get }
     func requestReposList(isPaginating: Bool)
+    func getSelectedRepo(index: Int) -> SingleRepoViewModel
 }
 
 protocol RepoListControllerType: AnyObject {
@@ -14,7 +15,7 @@ protocol RepoListControllerType: AnyObject {
 }
 
 protocol RepoListControllerDelegate: AnyObject {
-    // TODO: - Add methods that will be responsible to pass data to next view
+    func showPullRequestList(repoOwner: String, repoName: String)
 }
 
 protocol ReposListViewType where Self: UIView {
