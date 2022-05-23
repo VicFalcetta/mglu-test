@@ -26,3 +26,6 @@ Foi utilizado o Swift Package Manager por ser uma framework mais amigável para 
 - Baixar ou clonar o repositório
 - Abrir o arquivo do projeto de projeto do Xcode `mglu-test.xcodeproj`
 - Escolher o simulador de preferência e rodar o app
+
+## Contato
+Qualquer dúvida basta abrir um issue aqui no repo, ou entrar em contato pelo meu email: vic.falcetis@gmail.com
