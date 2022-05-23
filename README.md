@@ -10,6 +10,9 @@ O projeto em sua grande maioria foi feito baseado em protocolos para manter o m�
 
 O Coordinator apenas cuida da instanciação dos presenters e view controller, e do fluxo das view controllers dentro da navigation controller, funcionando como delegate para as view controllers em que elas passam os dados para o coordinator e ele apresenta o fluxo pedido pela view controller.
 
+## Network
+Para poupar tempo e pela sua facilidade de uso e debug, foi optado por utilizar a biblioteca do Alamofire para cuidar da requisição de backend do projeto. Juntamente com ela, foi feita uma camada de serviço para especificar os parametros, caminhos e headers necessários. Além disso foi feito um objeto responsável para realizar as chamadas de fato que serve como intermediário entre o Alamofire e o Presenter das telas.
+
 ## Interface
 A construção de interface foi feita por meio do view code. O motivo por essa escolha se basea simplesmente por ser mais fácil de se fazer a injestão de dependência, maior controle de responsabilidades e pelo fato de ser mais fácil de se resolver conflitos de código caso ocorram.
 
@@ -17,10 +20,11 @@ A construção de interface foi feita por meio do view code. O motivo por essa e
 Foi utilizado o Swift Package Manager por ser uma framework mais amigável para instalação tanto das frameworks para dentro do projeto quanto para quem for fazer manutenção do projeto, assim evitando de ter versões especificas de outras libs para poder executar o projeto, algo que é visto no CocoaPods.
 
 ### Bibliotecas utilizadas
-- Nimble
-- Quick
-- Nimble_Snapshots
-- Snapkit
+- [Nimble](https://github.com/Quick/Nimble)
+- [Quick](https://github.com/Quick/Quick)
+- [Nimble_Snapshots](https://github.com/ashfurrow/Nimble-Snapshots)
+- [Snapkit](https://github.com/SnapKit/SnapKit)
+- [Alamofire](https://github.com/Alamofire/Alamofire)
 
 ## Como executar
 - Baixar ou clonar o repositório
