@@ -1,8 +1,16 @@
 import Alamofire
 
 final class GitHubAppRepository: GitHubAppRepositoryType {
-    func requestRepoList(page: Int, completion: @escaping (Result<RepoListData, GitHubAPIError>) -> Void) {
+    func requestRepoList(page: Int,
+                         completion: @escaping (Result<RepoListData, GitHubAPIError>) -> Void) {
         request(GitHubAppService.repoList(page: page),
+                onComplete: completion)
+    }
+    
+    func requestPullList(owner: String,
+                         repoName: String,
+                         completion: @escaping (Result<[PullRequestListData], GitHubAPIError>) -> Void) {
+        request(GitHubAppService.pullList(owner: owner, repo: repoName),
                 onComplete: completion)
     }
 

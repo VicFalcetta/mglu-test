@@ -28,6 +28,26 @@
 		225D78122834A9CE00ED52FA /* GitHubAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78112834A9CE00ED52FA /* GitHubAppRepository.swift */; };
 		225D78142834AB0000ED52FA /* GitHubAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78132834AB0000ED52FA /* GitHubAPIError.swift */; };
 		225D78162834AC3F00ED52FA /* RepoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D78152834AC3F00ED52FA /* RepoListData.swift */; };
+		22B8601028385EFC007E98B1 /* PullRequestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8600F28385EFC007E98B1 /* PullRequestListViewModel.swift */; };
+		22B86013283860A8007E98B1 /* PullRequestListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86012283860A8007E98B1 /* PullRequestListCellView.swift */; };
+		22B8601728396998007E98B1 /* PullRequestListCellViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8601628396998007E98B1 /* PullRequestListCellViewTests.swift */; };
+		22B8601928396D82007E98B1 /* PullRequestListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8601828396D82007E98B1 /* PullRequestListTableCell.swift */; };
+		22B8601B28396F3C007E98B1 /* PullRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8601A28396F3C007E98B1 /* PullRequestListView.swift */; };
+		22B8601D283970BC007E98B1 /* PullRequestListErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8601C283970BC007E98B1 /* PullRequestListErrorView.swift */; };
+		22B8601F2839787D007E98B1 /* PullResquestListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8601E2839787D007E98B1 /* PullResquestListDataSource.swift */; };
+		22B8602128397EE4007E98B1 /* PullRequestListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8602028397EE4007E98B1 /* PullRequestListData.swift */; };
+		22B860232839822A007E98B1 /* PullRequestListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B860222839822A007E98B1 /* PullRequestListProtocols.swift */; };
+		22B86025283982CF007E98B1 /* PullRequestListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86024283982CF007E98B1 /* PullRequestListController.swift */; };
+		22B860272839840B007E98B1 /* PullRequestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B860262839840B007E98B1 /* PullRequestListPresenter.swift */; };
+		22B86029283AEF0E007E98B1 /* PullRequestListErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86028283AEF0E007E98B1 /* PullRequestListErrorViewTests.swift */; };
+		22B8602B283AF1C4007E98B1 /* PullRequestListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8602A283AF1C4007E98B1 /* PullRequestListViewTests.swift */; };
+		22B8602E283AF5B8007E98B1 /* PullRequestViewModel+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8602D283AF5B8007E98B1 /* PullRequestViewModel+Stubs.swift */; };
+		22B86031283AF785007E98B1 /* PullRequestListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86030283AF785007E98B1 /* PullRequestListPresenterSpy.swift */; };
+		22B86033283AF94B007E98B1 /* PullRequestListControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86032283AF94B007E98B1 /* PullRequestListControllerSpy.swift */; };
+		22B86035283AFA64007E98B1 /* PullRequestListData+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86034283AFA64007E98B1 /* PullRequestListData+Stubs.swift */; };
+		22B86037283AFCB9007E98B1 /* PullRequestListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86036283AFCB9007E98B1 /* PullRequestListPresenterTests.swift */; };
+		22B86039283B0818007E98B1 /* PullRequestWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86038283B0818007E98B1 /* PullRequestWebView.swift */; };
+		22B8603C283B0A5E007E98B1 /* PullRequestWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B8603B283B0A5E007E98B1 /* PullRequestWebViewController.swift */; };
 		22D8208D28358339008D377C /* RepoListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8208C28358339008D377C /* RepoListProtocols.swift */; };
 		22D8208F2835837F008D377C /* RepoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D8208E2835837F008D377C /* RepoListViewController.swift */; };
 		22D82092283585DD008D377C /* RepoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D82091283585DD008D377C /* RepoListPresenter.swift */; };
@@ -75,6 +95,26 @@
 		225D78112834A9CE00ED52FA /* GitHubAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppRepository.swift; sourceTree = "<group>"; };
 		225D78132834AB0000ED52FA /* GitHubAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIError.swift; sourceTree = "<group>"; };
 		225D78152834AC3F00ED52FA /* RepoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListData.swift; sourceTree = "<group>"; };
+		22B8600F28385EFC007E98B1 /* PullRequestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListViewModel.swift; sourceTree = "<group>"; };
+		22B86012283860A8007E98B1 /* PullRequestListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListCellView.swift; sourceTree = "<group>"; };
+		22B8601628396998007E98B1 /* PullRequestListCellViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListCellViewTests.swift; sourceTree = "<group>"; };
+		22B8601828396D82007E98B1 /* PullRequestListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListTableCell.swift; sourceTree = "<group>"; };
+		22B8601A28396F3C007E98B1 /* PullRequestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListView.swift; sourceTree = "<group>"; };
+		22B8601C283970BC007E98B1 /* PullRequestListErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListErrorView.swift; sourceTree = "<group>"; };
+		22B8601E2839787D007E98B1 /* PullResquestListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullResquestListDataSource.swift; sourceTree = "<group>"; };
+		22B8602028397EE4007E98B1 /* PullRequestListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListData.swift; sourceTree = "<group>"; };
+		22B860222839822A007E98B1 /* PullRequestListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListProtocols.swift; sourceTree = "<group>"; };
+		22B86024283982CF007E98B1 /* PullRequestListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListController.swift; sourceTree = "<group>"; };
+		22B860262839840B007E98B1 /* PullRequestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListPresenter.swift; sourceTree = "<group>"; };
+		22B86028283AEF0E007E98B1 /* PullRequestListErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListErrorViewTests.swift; sourceTree = "<group>"; };
+		22B8602A283AF1C4007E98B1 /* PullRequestListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListViewTests.swift; sourceTree = "<group>"; };
+		22B8602D283AF5B8007E98B1 /* PullRequestViewModel+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PullRequestViewModel+Stubs.swift"; sourceTree = "<group>"; };
+		22B86030283AF785007E98B1 /* PullRequestListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListPresenterSpy.swift; sourceTree = "<group>"; };
+		22B86032283AF94B007E98B1 /* PullRequestListControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListControllerSpy.swift; sourceTree = "<group>"; };
+		22B86034283AFA64007E98B1 /* PullRequestListData+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PullRequestListData+Stubs.swift"; sourceTree = "<group>"; };
+		22B86036283AFCB9007E98B1 /* PullRequestListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListPresenterTests.swift; sourceTree = "<group>"; };
+		22B86038283B0818007E98B1 /* PullRequestWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestWebView.swift; sourceTree = "<group>"; };
+		22B8603B283B0A5E007E98B1 /* PullRequestWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestWebViewController.swift; sourceTree = "<group>"; };
 		22D8208C28358339008D377C /* RepoListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListProtocols.swift; sourceTree = "<group>"; };
 		22D8208E2835837F008D377C /* RepoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewController.swift; sourceTree = "<group>"; };
 		22D82091283585DD008D377C /* RepoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListPresenter.swift; sourceTree = "<group>"; };
@@ -147,6 +187,7 @@
 		2247C3F72834755B00723B4F /* mglu-test_Tests */ = {
 			isa = PBXGroup;
 			children = (
+				22B860142839696D007E98B1 /* PullList */,
 				225D78082834A03A00ED52FA /* ReposList */,
 			);
 			path = "mglu-test_Tests";
@@ -188,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				225D78152834AC3F00ED52FA /* RepoListData.swift */,
+				22B8602028397EE4007E98B1 /* PullRequestListData.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -209,6 +251,94 @@
 				22D820932835865A008D377C /* GitHubAppRepositoryType.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		22B8600C28385EB5007E98B1 /* PullRequestList */ = {
+			isa = PBXGroup;
+			children = (
+				22B8600D28385ED4007E98B1 /* Views */,
+				22B860222839822A007E98B1 /* PullRequestListProtocols.swift */,
+				22B86024283982CF007E98B1 /* PullRequestListController.swift */,
+				22B860262839840B007E98B1 /* PullRequestListPresenter.swift */,
+			);
+			path = PullRequestList;
+			sourceTree = "<group>";
+		};
+		22B8600D28385ED4007E98B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22B8601128386073007E98B1 /* PullRequestListCell */,
+				22B8600E28385ED8007E98B1 /* Models */,
+				22B8601A28396F3C007E98B1 /* PullRequestListView.swift */,
+				22B8601C283970BC007E98B1 /* PullRequestListErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22B8600E28385ED8007E98B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22B8600F28385EFC007E98B1 /* PullRequestListViewModel.swift */,
+				22B8601E2839787D007E98B1 /* PullResquestListDataSource.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		22B8601128386073007E98B1 /* PullRequestListCell */ = {
+			isa = PBXGroup;
+			children = (
+				22B86012283860A8007E98B1 /* PullRequestListCellView.swift */,
+				22B8601828396D82007E98B1 /* PullRequestListTableCell.swift */,
+			);
+			path = PullRequestListCell;
+			sourceTree = "<group>";
+		};
+		22B860142839696D007E98B1 /* PullList */ = {
+			isa = PBXGroup;
+			children = (
+				22B8602F283AF609007E98B1 /* Doubles */,
+				22B8602C283AF5A8007E98B1 /* Stubs */,
+				22B8601528396974007E98B1 /* Views */,
+				22B86036283AFCB9007E98B1 /* PullRequestListPresenterTests.swift */,
+			);
+			path = PullList;
+			sourceTree = "<group>";
+		};
+		22B8601528396974007E98B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22B8601628396998007E98B1 /* PullRequestListCellViewTests.swift */,
+				22B86028283AEF0E007E98B1 /* PullRequestListErrorViewTests.swift */,
+				22B8602A283AF1C4007E98B1 /* PullRequestListViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22B8602C283AF5A8007E98B1 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				22B8602D283AF5B8007E98B1 /* PullRequestViewModel+Stubs.swift */,
+				22B86034283AFA64007E98B1 /* PullRequestListData+Stubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		22B8602F283AF609007E98B1 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				22B86030283AF785007E98B1 /* PullRequestListPresenterSpy.swift */,
+				22B86032283AF94B007E98B1 /* PullRequestListControllerSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		22B8603A283B0A37007E98B1 /* PullRequesWebView */ = {
+			isa = PBXGroup;
+			children = (
+				22B86038283B0818007E98B1 /* PullRequestWebView.swift */,
+				22B8603B283B0A5E007E98B1 /* PullRequestWebViewController.swift */,
+			);
+			path = PullRequesWebView;
 			sourceTree = "<group>";
 		};
 		22D82095283587E5008D377C /* Common */ = {
@@ -247,8 +377,10 @@
 		22F3DAE728331CFC005A0C25 /* mglu-test */ = {
 			isa = PBXGroup;
 			children = (
+				22B8603A283B0A37007E98B1 /* PullRequesWebView */,
 				22D82095283587E5008D377C /* Common */,
 				225D780A2834A60D00ED52FA /* Network */,
+				22B8600C28385EB5007E98B1 /* PullRequestList */,
 				22F3DB1F28345FFC005A0C25 /* ReposList */,
 				22F3DB1C28332228005A0C25 /* Assets */,
 				22F3DAFD28331E2B005A0C25 /* Coordinator */,
@@ -439,17 +571,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B86033283AF94B007E98B1 /* PullRequestListControllerSpy.swift in Sources */,
 				225D78062834944000ED52FA /* ReposListViewTests.swift in Sources */,
+				22B8601728396998007E98B1 /* PullRequestListCellViewTests.swift in Sources */,
 				2247C3FF283476CF00723B4F /* SingleRepoTableCellTests.swift in Sources */,
+				22B8602B283AF1C4007E98B1 /* PullRequestListViewTests.swift in Sources */,
 				2221B62B2835C09500962155 /* ReposListViewModel+Stubs.swift in Sources */,
 				2221B62F2835C5A200962155 /* RepoListPresenterTests.swift in Sources */,
+				22B86031283AF785007E98B1 /* PullRequestListPresenterSpy.swift in Sources */,
+				22B86035283AFA64007E98B1 /* PullRequestListData+Stubs.swift in Sources */,
 				2221B6222835B86800962155 /* RepoListPresenterSpy.swift in Sources */,
 				2221B6312835C78500962155 /* RepoListData+Stubs.swift in Sources */,
 				2221B6242835B90D00962155 /* RepoListViewControllerSpy.swift in Sources */,
 				2221B6262835B9CF00962155 /* RepoListViewControllerTests.swift in Sources */,
+				22B8602E283AF5B8007E98B1 /* PullRequestViewModel+Stubs.swift in Sources */,
 				2221B6282835BBB900962155 /* ReposListViewSpy.swift in Sources */,
 				221F697D283720DF00DB0AF8 /* RepoListErrorViewTests.swift in Sources */,
+				22B86037283AFCB9007E98B1 /* PullRequestListPresenterTests.swift in Sources */,
 				2221B62D2835C40600962155 /* GitHubAppRepositorySpy.swift in Sources */,
+				22B86029283AEF0E007E98B1 /* PullRequestListErrorViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,20 +601,32 @@
 				225D78122834A9CE00ED52FA /* GitHubAppRepository.swift in Sources */,
 				22F3DB292834659B005A0C25 /* SingleRepoTableCell.swift in Sources */,
 				225D780E2834A64C00ED52FA /* GitHubAppService.swift in Sources */,
+				22B860232839822A007E98B1 /* PullRequestListProtocols.swift in Sources */,
 				225D78162834AC3F00ED52FA /* RepoListData.swift in Sources */,
 				225D780428347FDB00ED52FA /* SingleRepoView.swift in Sources */,
+				22B860272839840B007E98B1 /* PullRequestListPresenter.swift in Sources */,
 				22F3DAE928331CFC005A0C25 /* AppDelegate.swift in Sources */,
+				22B86039283B0818007E98B1 /* PullRequestWebView.swift in Sources */,
 				22D8208F2835837F008D377C /* RepoListViewController.swift in Sources */,
 				22F3DB2728346320005A0C25 /* ReposListViewModel.swift in Sources */,
+				22B8601B28396F3C007E98B1 /* PullRequestListView.swift in Sources */,
+				22B86013283860A8007E98B1 /* PullRequestListCellView.swift in Sources */,
+				22B8601D283970BC007E98B1 /* PullRequestListErrorView.swift in Sources */,
 				22F3DB222834602D005A0C25 /* ReposListView.swift in Sources */,
 				225D78102834A81900ED52FA /* Request.swift in Sources */,
+				22B8601F2839787D007E98B1 /* PullResquestListDataSource.swift in Sources */,
 				22F3DB242834622B005A0C25 /* ReposListTableDataSource.swift in Sources */,
 				22D82092283585DD008D377C /* RepoListPresenter.swift in Sources */,
 				221F697B283713B000DB0AF8 /* RepoListErrorView.swift in Sources */,
+				22B8601928396D82007E98B1 /* PullRequestListTableCell.swift in Sources */,
 				22D820942835865A008D377C /* GitHubAppRepositoryType.swift in Sources */,
 				225D78142834AB0000ED52FA /* GitHubAPIError.swift in Sources */,
+				22B8603C283B0A5E007E98B1 /* PullRequestWebViewController.swift in Sources */,
 				22F3DAEB28331CFC005A0C25 /* SceneDelegate.swift in Sources */,
 				22D8208D28358339008D377C /* RepoListProtocols.swift in Sources */,
+				22B8601028385EFC007E98B1 /* PullRequestListViewModel.swift in Sources */,
+				22B86025283982CF007E98B1 /* PullRequestListController.swift in Sources */,
+				22B8602128397EE4007E98B1 /* PullRequestListData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -71,7 +71,9 @@ extension RepoListViewController: RepoListControllerType {
 
 extension RepoListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row at index \(indexPath.row)")
+        let selectedRepo = presenter.getSelectedRepo(index: indexPath.row)
+        delegate?.showPullRequestList(repoOwner: selectedRepo.authorName,
+                                      repoName: selectedRepo.repoName)
     }
 }
 
